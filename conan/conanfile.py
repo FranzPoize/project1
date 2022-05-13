@@ -26,8 +26,8 @@ class Project1Conan(ConanFile):
     }
 
     requires = (
-        ("project2/91754a16e2@adnn/develop"),
-        ("project3/0e7fcde270@adnn/develop"),
+        ("project2/3a454f7ea4@adnn/develop"),
+        ("project3/b414e7a6e9@adnn/develop"),
     )
 
 
