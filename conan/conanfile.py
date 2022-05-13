@@ -26,7 +26,7 @@ class Project1Conan(ConanFile):
     }
 
     requires = (
-        ("project2/f278c70fbe@adnn/develop"),
+        ("project2/0bfd3001a6@adnn/develop"),
         ("project3/3c4d4172a6@adnn/develop"),
     )
 
@@ -74,7 +74,7 @@ class Project1Conan(ConanFile):
             # avoid path.join, on Windows it outputs '\', which is a string escape sequence.
             config.write("include(\"{}\")\n".format("${CMAKE_CURRENT_LIST_DIR}/conan_paths.cmake"))
             config.write("set({} {})\n".format("BUILD_tests", self.options.build_tests))
-            config.write("set({} {})\n".format("BUILD_Grapito_DEVMODE", self.options.build_devmode))
+            config.write("set({} {})\n".format("BUILD_Project1_DEVMODE", self.options.build_devmode))
             version = self._build_version()
             if version: config.write("set({} {})\n".format("BUILD_VERSION", version))
 
