@@ -12,10 +12,8 @@ source_group(TREE ${CMAKE_CURRENT_LIST_DIR}
              FILES ${${TARGET_NAME}_HEADERS} ${${TARGET_NAME}_SOURCES}
 )
 
-
-find_package(project3 CONFIG REQUIRED COMPONENTS project3)
-find_package(project2 CONFIG REQUIRED COMPONENTS project2)
-find_package(Boost REQUIRED COMPONENTS program_options)
+find_package(Project3 CONFIG REQUIRED COMPONENTS project3)
+find_package(Project2 CONFIG REQUIRED COMPONENTS project2)
 
 add_executable(${TARGET_NAME}
     ${${TARGET_NAME}_SOURCES}
@@ -44,8 +42,6 @@ target_link_libraries(${TARGET_NAME}
     PRIVATE
         sph::project2
         sph::project3
-
-        Boost::boost
 )
 
 
