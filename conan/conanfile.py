@@ -26,12 +26,13 @@ class Project1Conan(ConanFile):
     }
 
     requires = (
-        ("project2/41f70d92c5@adnn/develop"),
+        ("project2/aaaaaaaaaa@adnn/develop"),
         ("project3/a657d69c1a@adnn/develop"),
+        ("boost/0.0.1")
     )
 
 
-    generators = "cmake_paths", "cmake_find_package_multi", "CMakeToolchain"
+    generators = "CMakeDeps", "CMakeToolchain"
     build_policy = "missing"
     # Otherwise, conan removes the imported imgui backends after build()
     # they are still required for the CMake config phase of package()
